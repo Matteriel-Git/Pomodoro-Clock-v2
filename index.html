@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Clock</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+</head>
+<body>
+
+    <div id="pomodoro">
+        <div id="clock">
+          <div id="timer">
+            <div id="title">Ready?</div>
+            <div id="countdown">
+              <span id="minutes">30</span>
+              <span id="seconds">00</span>
+            </div>
+            <div id="controls" class="reset">
+              <div id="start"><i class="fas fa-play"></i> Start</div>
+              <div id="pause"><i class="fas fa-pause"></i> Pause</div>
+              <div id="reset"><i class="fas fa-sync-alt"></i> Reset</div>
+            </div>
+          </div>
+        </div>
+        <div id="options">
+          <div id="session">
+            <i id="incrSession" class="fas fa-angle-double-up"></i>
+            <span class="option-title">Session</span>
+            <input id="sessionInput" type="number" value="30" max="60" min="5">
+            <i id="decrSession" class="fas fa-angle-double-down"></i>
+          </div>
+          <div id="break">
+            <i id="incrBreak" class="fas fa-angle-double-up"></i>
+            <span class="option-title">Break</span>
+            <input id="breakInput" type="number" value="5" max="10" min="1">
+            <i id="decrBreak" class="fas fa-angle-double-down"></i>
+          </div>
+        </div>
+      </div>
+      <div id="audio-selector">
+        <div id="forest" class="theme"><!--🌲 -->Forest</div>
+        <div id="ocean" class="theme"><!--🌊 -->Ocean</div>
+        <div id="rainy" class="selected theme"><!--🌧 -->Rainy</div>
+        <div id="peace" class="theme"><!--🧘 -->Peace</div>
+        <div id="cafe" class="theme"><!--☕ -->Caf&eacute;</div>
+      </div>
+      <audio loop autoplay="false" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3">
+    
+</body>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="script.js"></script>
+
+
+</html>
