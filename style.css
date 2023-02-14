@@ -23,7 +23,6 @@ body {
     max-width: 512px;
     width: 100%;
 }
-
 #pomodoro #clock {
     background: url(https://pbs.twimg.com/media/FogZA5WWYAEsHjV?format=jpg&name=large) no-repeat center center;
     background-size: contain;
