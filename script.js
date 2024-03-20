@@ -153,11 +153,40 @@ $(() => {
       $theme.removeClass("selected");
       $(e.target).addClass("selected");
       switch(e.target.id){
-        case "forest": $audio.attr("src", "https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/forest.mp3"); break;
-        case "ocean": $audio.attr("src", "https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/ocean.mp3"); break;
-        case "rainy": $audio.attr("src", "https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3"); break;
-        case "peace": $audio.attr("src", "https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/peace.mp3"); break;
-        case "cafe": $audio.attr("src", "https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/cafe.mp3"); break;
+        case "forest": 
+        $audio.attr("src", "sounds/birds-forest.mp3"); 
+        $audio.prop("volume", 0.05); break;
+
+        case "ocean": 
+        $audio.attr("src", "sounds/ocean-waves.wav");
+        $audio.prop("volume", 0.05); break;
+
+        case "rainy": 
+        $audio.attr("src", "sounds/calm-thunder.wav");
+        $audio.prop("volume", 0.05); break;
+
+        case "peace": 
+        $audio.attr("src", "peace.mp3");
+        $audio.prop("volume", 0.05); break;
+
+        case "cafe": 
+        $audio.attr("src", "sounds/cafe-ambience.mp3");
+        $audio.prop("volume", 0.05); break;
       }
     }
+    const volumeSlider = document.getElementById('volume-slider');
+    const volumeLevel = document.getElementById('volume-level');
+
+    volumeSlider.addEventListener('input', function() {
+      const volume = this.value / 100;
+      volumeLevel.textContent = volume;
+      $audio.each(function() {
+        this.volume = volume;
+      });
+    });
+    function setInitialVolume(volume) {
+      volumeSlider.value = volume;
+      volumeLevel.textContent = volume;
+    }
+    setInitialVolume(10);
   });

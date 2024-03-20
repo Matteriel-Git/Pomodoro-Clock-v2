@@ -47,7 +47,17 @@
         <div id="peace" class="theme"><!--🧘 -->Peace</div>
         <div id="cafe" class="theme"><!--☕ -->Caf&eacute;</div>
       </div>
-      <audio loop autoplay="false" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3">
+
+      <div id="volume-control">
+        <div id="headphones">
+        <i class='fas fa-volume-up'></i>
+        </div>
+        <input type="range" min="0" max="100" value="10" class="slider" id="volume-slider">
+        
+        <span id="volume-level">10</span>
+      </div>
+
+      <audio loop autoplay="false" src="sounds/calm-thunder.wav">
     
 </body>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
